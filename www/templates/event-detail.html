@@ -25,16 +25,46 @@
                             <h3>{{event.first_date}}</h3></div>
                     </div>
 
+                    <div class="row">
+                        <div class="col col-25">
+                            <h3>Description:</h3></div>
+                        <div class="col col-75">
+                            <h3>{{event.description_text}}</h3></div>
+                    </div>
+
+
+                    <div class="row">
+                                       
+                         <h3>{{event.description_text}}</h3>
+                    </div>
                  
+                    <div ng-if="event.ticket_url != '' ">
+                        <a href="https://www.facebook.com/events/{{event.facebook_id}}"onclick="window.open(this.href, '_blank', 'location=yes'); return false;">
+                            <button class="button button-block button-royal">
+                                Buy Tickets Now!
+                            </button>
+                        </a>
+                    </div>
+                    
+
+                    <div ng-if="event.facebook_id">
+                        <a href="https://www.facebook.com/events/{{event.facebook_id}}"onclick="window.open(this.href, '_blank', 'location=yes'); return false;">
+                            <button class="button button-block button-royal">
+                                View this Event on Facebook!
+                            </button>
+                        </a>
+                    </div>
+
+                    <div ng-if="event.url != '' ">
+                        <a href="{{event.url}}"onclick="window.open(this.href, '_blank', 'location=yes'); return false;">
+                            <button class="button button-block button-royal">
+                              More Info
+                            </button>
+                        </a>
+                    </div>
                     <a href="http://afterclass.uiowa.edu/events/event/{{event.urlname}}"onclick="window.open(this.href, '_blank', 'location=yes'); return false;">
                         <button class="button button-block button-royal">
-                            More Info
-                        </button>
-                    </a>
-
-                    <a ng-if="{{event.facebook_id}}" href="http://afterclass.uiowa.edu/events/event/{{event.urlname}}"onclick="window.open(this.href, '_blank', 'location=yes'); return false;">
-                        <button class="button button-block button-royal">
-                            Lies
+                            View on After-Class Website
                         </button>
                     </a>
 
