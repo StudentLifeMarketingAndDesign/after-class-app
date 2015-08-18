@@ -43,17 +43,13 @@ angular.module('starter.controllers', [])
   Events.get($stateParams.eventId).then(function(res) { 
     console.log(res.data.events);
     $scope.event = res.data.event;
-    $scope.eventTags = res.data.event.tags;
   });
 })
 
-
 .controller('TaggedEventsCtrl', function($scope, $stateParams, Events){
-  Events.getByTag($stateParams.tagId).then(function(res) { 
+  Events.get($stateParams.tagId).then(function(res) { 
     console.log(res.data.events);
     $scope.events = res.data.events;
-    $scope.tag = $stateParams.tagId;
-
   });
 })
 

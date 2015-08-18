@@ -1,5 +1,11 @@
-<ion-view view-title="After-Class Feed">
-    <ion-content class="padding">
+ <ion-view  >
+
+<!-- <ion-view> -->
+    <ion-nav-title>
+      <img class="logo" src="img/afterclass_logo.png"/>
+    </ion-nav-title>
+
+    <ion-content class="padding"> 
         <ion-list ng-controller="FeedCtrl">
             <div class="list card" ng-repeat="event in events">
                 <ion-item href="#/tab/feed/{{event.event.id}}">

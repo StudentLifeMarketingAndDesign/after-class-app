@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:8100/#/tab/feed -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <meta charset="utf-8">
+    <script>
+      // Injected Ionic Go To URL Live Reload Plugin
+      window.LiveReloadPlugin_IonicGoToUrl = (function() {
+        var GOTO_KEY = "__ionic_goto_url__";
+        var HISTORY_GO_KEY = "__ionic_history_go__";
+        var GoToUrlPlugin = function(window, host) {
+          this.window = window;
+          this.host = host;
+        }
+        GoToUrlPlugin.identifier = "__ionic_goto_url__";
+        GoToUrlPlugin.version = "1.0";
+        GoToUrlPlugin.prototype.reload = function(path) {
+          try {
+            if(path) {
+              if(path.indexOf(GOTO_KEY) === 0) {
+                this.window.document.location = path.replace(GOTO_KEY, "");
+                return true;
+              }
+              if(path.indexOf(HISTORY_GO_KEY) === 0) {
+                this.window.document.history.go( parseInt(path.replace(HISTORY_GO_KEY, ""), 10));
+                return true;
+              }
+            }
+          } catch(e) {
+            console.log(e);
+          }
+          return false;
+        };
+        return GoToUrlPlugin;
+      })();
+    </script>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <!-- compiled css output -->
+    <link href="http://localhost:8100/css/ionic.app.css" rel="stylesheet">
+    <script src="./localhost_files/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="./localhost_files/cordova.js"></script>
+    <!-- your app's js -->
+    <script src="./localhost_files/app.js"></script>
+    <script src="./localhost_files/controllers.js"></script>
+    <script src="./localhost_files/services.js"></script>
+</head>
+
+<body ng-app="starter" class="grade-a platform-browser platform-macintel platform-ready">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-royal nav-bar-container" nav-bar-transition="ios" nav-bar-direction="forward" nav-swipe="">
+        <ion-nav-back-button class="hide"></ion-nav-back-button>
+    <div class="nav-bar-block" nav-bar="active"><ion-header-bar class="bar-royal bar bar-header disable-user-behavior" align-title="center"><button ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item"><i class="icon ion-ios-arrow-back"></i> 
+
+        <span class="back-text" style="transform: translate3d(0px, 0px, 0px);"><span class="default-title">Back</span><span class="previous-title hide">undefined</span></span></button><div class="title title-center header-item" style="transform: translate3d(0px, 0px, 0px); left: 65px; right: 65px;"><span class="nav-bar-title">
+      <img class="logo" src="./localhost_files/afterclass_logo.png">
+    </span></div></ion-header-bar></div><div class="nav-bar-block" nav-bar="cached"><ion-header-bar class="bar-royal bar bar-header disable-user-behavior" align-title="center"><button ng-click="$ionicGoBack()" class="button back-button hide buttons  button-clear header-item" style="opacity: 0;"><i class="icon ion-ios-arrow-back"></i> 
+
+        <span class="back-text" style="transform: translate3d(0px, 0px, 0px); opacity: 0;"><span class="default-title">Back</span><span class="previous-title hide"></span></span></button><div class="title title-center header-item" style="transform: translate3d(-405.553573608398px, 0px, 0px); opacity: 0;"><span class="nav-bar-title">
+      <h1 class="title ng-binding">Training: ICON Overview </h1>
+    </span></div></ion-header-bar></div></ion-nav-bar>
+
+    <ion-header-bar align-title="center" class="bar-royal bar bar-header disable-user-behavior">
+<!--         <h1 class="title"><img class="logo" src="img/afterclass_logo.png"/></h1> -->
+    </ion-header-bar>
+    
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe=""><ion-tabs class="tabs-icon-top tabs-color-active-positive pane tabs-bottom tabs-standard" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);"><div class="tab-nav tabs">
+
+  <!-- Dashboard Tab -->
+  <ion-tab icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/feed"></ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats"></ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account"></ion-tab>
+
+
+<a ng-class="{&#39;tab-item-active&#39;: isTabActive(), &#39;has-badge&#39;:badge, &#39;tab-hidden&#39;:isHidden()}" ng-disabled="disabled()" class="tab-item tab-item-active" icon-on="ion-ios-pulse-strong" icon-off="ion-ios-pulse"><!-- ngIf: badge --><!-- ngIf: getIconOn() && isTabActive() --><i class="icon ion-ios-pulse-strong" ng-if="getIconOn() &amp;&amp; isTabActive()"></i><!-- end ngIf: getIconOn() && isTabActive() --><!-- ngIf: getIconOff() && !isTabActive() --><span class="tab-title ng-binding" ng-bind-html="title">Feed</span></a><a ng-class="{&#39;tab-item-active&#39;: isTabActive(), &#39;has-badge&#39;:badge, &#39;tab-hidden&#39;:isHidden()}" ng-disabled="disabled()" class="tab-item" icon-on="ion-ios-chatboxes" icon-off="ion-ios-chatboxes-outline"><!-- ngIf: badge --><!-- ngIf: getIconOn() && isTabActive() --><!-- ngIf: getIconOff() && !isTabActive() --><i class="icon ion-ios-chatboxes-outline" ng-if="getIconOff() &amp;&amp; !isTabActive()"></i><!-- end ngIf: getIconOff() && !isTabActive() --><span class="tab-title ng-binding" ng-bind-html="title">Chats</span></a><a ng-class="{&#39;tab-item-active&#39;: isTabActive(), &#39;has-badge&#39;:badge, &#39;tab-hidden&#39;:isHidden()}" ng-disabled="disabled()" class="tab-item" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline"><!-- ngIf: badge --><!-- ngIf: getIconOn() && isTabActive() --><!-- ngIf: getIconOff() && !isTabActive() --><i class="icon ion-ios-gear-outline" ng-if="getIconOff() &amp;&amp; !isTabActive()"></i><!-- end ngIf: getIconOff() && !isTabActive() --><span class="tab-title ng-binding" ng-bind-html="title">Account</span></a></div><ion-nav-view name="tab-feed" class="view-container tab-content" nav-view="active" nav-view-transition="ios" nav-view-direction="forward" nav-swipe=""><ion-view class="pane" nav-view="cached" style="opacity: 0.9; transform: translate3d(-33%, 0px, 0px);">
+
+    <ion-nav-title class="hide"></ion-nav-title>
+
+
+    <ion-content class="padding scroll-content ionic-scroll  has-header has-tabs"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+        <div class="list card">
+            <div class="item item-image">
+                <img src="./localhost_files/c7141f85ef9037162152a276f5f838a34653244c.jpg">
+            </div>
+            <div class="item item-body">
+                <div>
+                    <div class="row">
+                        <div class="col col-25">
+                            <h2>Title:</h2> </div>
+
+                        <div class="col col-75">
+                            <h2 class="ng-binding">Training: ICON Overview</h2></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-25">
+                            <h3>Location:</h3></div>
+                        <div class="col col-75">
+                            <h3 class="ng-binding">University Capitol Centre</h3></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-25">
+                            <h3>Upcoming Date:</h3></div>
+                        <div class="col col-75">
+                            <h3 class="ng-binding">2015-08-10</h3></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-25">
+                            <h3>Description:</h3></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="ng-binding">The Office of Teaching, Learning, &amp; Technology will offer instructional technology training sessions on the date(s) and time(s) listed below.
+
+ 
+
+All training sessions below will be held in the University Capitol Centre Training Room (located on the second floor of the UCC building).  To learn more about available instructional technology and trainings, visit the Office of Teaching, Learning &amp; Technology website.
+
+ 
+
+ICON Overview - Click the date below to register:
+
+-Monday, August 10, 9:30 - 11:30 am (REGISTRATION FULL)
+
+-Wednesday, August 12, 9:30 - 11:30 am
+
+-Monday, August 17, 1:30 - 3:30 pm (REGISTRATION FULL)
+
+ 
+
+Receive an overview of the new version of ICON and learn how to use ICON’s Content tool to make course materials and related links available to your students in a timely, easily accessible manner. Practice uploading files and creating Content Modules (folders) to organize student links to these files. Learn how to link to external websites or related ICON tools—like a Quiz or Discussion. Learn how to restrict content availability to certain times or students and how to view your Content as a student would.
+
+ 
+
+If you cannot make it to a training or you do not see the topic you need covered, we also offer individual appointments.  Additionally, we offer training on a variety of instructional tools such as ICON, UICapture/Panopto, advanced clickers, ShareStream, TurnItIn, the Wiki, and more.  With advanced planning, we can come to your location and do a group training for your department, as well.
+
+ 
+
+Please contact the ITS Help Desk for more information.</h3>
+                            <h3 class="ng-binding"> ["technology","OTLT"] </h3>
+                        </div>
+                    </div>
+                    <!-- ngIf: event.ticket_url != '' -->
+
+                    <!-- ngIf: event.facebook_id -->
+                    <!-- ngIf: event.url != '' --><div ng-if="event.url != &#39;&#39; " class="">
+                        <a href="http://teach.its.uiowa.edu/technology-tools" onclick="window.open(this.href, &#39;_blank&#39;, &#39;location=yes&#39;); return false;">
+                            <button class="button button-block button-royal">
+                                More Info
+                            </button>
+                        </a>
+                    </div><!-- end ngIf: event.url != '' -->
+                    <a href="http://afterclass.uiowa.edu/events/event/training_icon_overview" onclick="window.open(this.href, &#39;_blank&#39;, &#39;location=yes&#39;); return false;">
+                        <button class="button button-block button-royal">
+                            View Event on Website
+                        </button>
+
+                    </a><a href="http://afterclass.uiowa.edu/events/event/training_icon_overview" onclick="window.open(this.href, &#39;_blank&#39;, &#39;location=yes&#39;); return false;">
+                        <button class="button button-block button-royal">
+                            View Event on Website
+                        </button>
+
+                    </a>
+                </div>
+            </div>
+    
+</div></div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 652px;"></div></div></ion-content></ion-view><ion-view class="pane" nav-view="active" style="opacity: 1; box-shadow: rgba(0, 0, 0, 0) 0px 0px 10px; transform: translate3d(0%, 0px, 0px);">
+
+<!-- <ion-view> -->
+    <ion-nav-title class="hide"></ion-nav-title>
+
+    <ion-content class="padding scroll-content ionic-scroll  has-header has-tabs"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);"> 
+        <ion-list ng-controller="FeedCtrl" class="disable-user-behavior"><div class="list">
+            <!-- ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/477155" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/477155" href="http://localhost:8100/#/tab/feed/477155">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Resident Education Conference</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/307644" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/307644" href="http://localhost:8100/#/tab/feed/307644">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/954fa4e958b3b4dbe79a209a6cf013bd3adaa578.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Ophthalmology Morning Rounds</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/484130" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/484130" href="http://localhost:8100/#/tab/feed/484130">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/e4e3788fa0a796cad3c18a4c79b93ffbc53fe8fc.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Comics and Graphic Novels: UIMA School Programs Collections</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/471989" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/471989" href="http://localhost:8100/#/tab/feed/471989">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c7141f85ef9037162152a276f5f838a34653244c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Training: ICON Overview</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/474331" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/474331" href="http://localhost:8100/#/tab/feed/474331">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b1e416f985ea034cde377468a922cdc38803a5ad.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Exploring the Demimonde: Sin and Temptation at the fin-de-siècle</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/463978" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/463978" href="http://localhost:8100/#/tab/feed/463978">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/f9014bcb6869d8fb3d8c7a93979b85b7bb88e48d.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Diabetes and Obesity Talks:   Kathleen  Janz , EdD</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/472017" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/472017" href="http://localhost:8100/#/tab/feed/472017">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c7141f85ef9037162152a276f5f838a34653244c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Training: UICapture - Windows (Beginner)</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/485898" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/485898" href="http://localhost:8100/#/tab/feed/485898">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b3a523831837577411cfaa8ccb81189d874766c6.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Endocrine Fellows' Curriculum Lecture Series</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/485907" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/485907" href="http://localhost:8100/#/tab/feed/485907">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/cd209255877a6c7e1c20f9b7974c577a2359210c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Endocrine Clinic Conference</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/362600" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/362600" href="http://localhost:8100/#/tab/feed/362600">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Surgical Audit</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/311491" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/311491" href="http://localhost:8100/#/tab/feed/311491">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Iowa Judicial Institute Training</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/471104" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/471104" href="http://localhost:8100/#/tab/feed/471104">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/7903ff18e28889b0dadc298d55c2883360a58c3c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">SBDC/UIRP Lunch &amp; Learn Series: Hills Bank</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/386452" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/386452" href="http://localhost:8100/#/tab/feed/386452">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">English Conversation Class</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/471992" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/471992" href="http://localhost:8100/#/tab/feed/471992">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c7141f85ef9037162152a276f5f838a34653244c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Training: Clickers - Windows</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/377795" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/377795" href="http://localhost:8100/#/tab/feed/377795">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">English Conversation Class</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/471612" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/471612" href="http://localhost:8100/#/tab/feed/471612">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/7903ff18e28889b0dadc298d55c2883360a58c3c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Need Small Business Advice? UIRP Hosts Bruce Guither for "Startup Solutions”</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/450495" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/450495" href="http://localhost:8100/#/tab/feed/450495">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c301ceb75dd33a951f6460176ea8657fb8947354.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">UI Mobile Museum at Iowa State Fair</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/453894" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/453894" href="http://localhost:8100/#/tab/feed/453894">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b9f682c497aa4f60c0c2cb4f3ce67a5960a55259.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Psychiatry PBA Exam</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/456979" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/456979" href="http://localhost:8100/#/tab/feed/456979">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/1218c989287c6c2ca17b584f19f897295df472b8.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Internal Medicine Grand Rounds</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/473234" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/473234" href="http://localhost:8100/#/tab/feed/473234">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/8a8438e1af3f730208594b8874e0eeb62d0c2316.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Project Art Roof-top Summer Concert Series</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/471996" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/471996" href="http://localhost:8100/#/tab/feed/471996">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c7141f85ef9037162152a276f5f838a34653244c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Training: Clickers - Mac</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/491752" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/491752" href="http://localhost:8100/#/tab/feed/491752">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/2f2c7f99da6384d43bc2247cca1f5213b14d3f22.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Startup mentor, angel investor Faz Bashi to give presentation Aug. 13</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/485914" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/485914" href="http://localhost:8100/#/tab/feed/485914">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/7b22d457e7a65a9775bb5bc166d20c66745cdc80.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Endocrine Grand Rounds</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/413827" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/413827" href="http://localhost:8100/#/tab/feed/413827">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/3eb0202f77d956638ffb7cd7d20a1021569d4cc5.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">White Coat Ceremony</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/473787" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/473787" href="http://localhost:8100/#/tab/feed/473787">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/5d13dad38e0adb86ddfbbd3aa51fa0dc957de010.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Friday Night Concert: Tropicante</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/486025" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/486025" href="http://localhost:8100/#/tab/feed/486025">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/2ca3ed1f00d788880363d585fe75d1a30bb43bfe.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Archaeology at "Seize the Carp!"</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/488819" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/488819" href="http://localhost:8100/#/tab/feed/488819">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/85d9690eb537d5dc8c771fe9a74ee909ca890422.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Free Movie Series - Back to the Future II</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/485732" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/485732" href="http://localhost:8100/#/tab/feed/485732">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c9fa164815bbdc3c55028faf3ea8a08d02732b45.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Movies@MNH: Disney's Dinosaur</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/490730" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/490730" href="http://localhost:8100/#/tab/feed/490730">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/99837fccd041ef95ad963f5da3a38fcc408c8f13.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">International Student Welcome Night</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/384911" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/384911" href="http://localhost:8100/#/tab/feed/384911">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/bf9426dc119b2178551c2fa775a29ed2c8cee204.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Iowa Law Intersession Week</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/384897" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/384897" href="http://localhost:8100/#/tab/feed/384897">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Iowa Law Orientation</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482463" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482463" href="http://localhost:8100/#/tab/feed/482463">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b9f682c497aa4f60c0c2cb4f3ce67a5960a55259.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Family Medicine Interest Group</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/446350" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/446350" href="http://localhost:8100/#/tab/feed/446350">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/f9014bcb6869d8fb3d8c7a93979b85b7bb88e48d.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Diabetes and Obesity Talks: Blake Rasmussen , PhD</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482710" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482710" href="http://localhost:8100/#/tab/feed/482710">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c38264a3e73ba99be8938674fca156c986e911ef.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">CPH Portrait Session</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/484895" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/484895" href="http://localhost:8100/#/tab/feed/484895">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/e54373cc2a85ca85c055844c8af38e070150f0ab.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">ICON Insider</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/484892" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/484892" href="http://localhost:8100/#/tab/feed/484892">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b3ff54b734fe803690dfbc8183b03bf7b2ce5470.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">TILE Fall Kickoff</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/472014" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/472014" href="http://localhost:8100/#/tab/feed/472014">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c7141f85ef9037162152a276f5f838a34653244c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Training: ShareStream</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/367103" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/367103" href="http://localhost:8100/#/tab/feed/367103">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c7141f85ef9037162152a276f5f838a34653244c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Training: UICapture - Mac (Beginner)</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/480741" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/480741" href="http://localhost:8100/#/tab/feed/480741">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/92b5444612993ccc3b7dfbfb984b60a635dab2f8.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">New Graduate Student Welcome &amp; Orientation</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482713" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482713" href="http://localhost:8100/#/tab/feed/482713">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c38264a3e73ba99be8938674fca156c986e911ef.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">CPH Portrait Session</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482975" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482975" href="http://localhost:8100/#/tab/feed/482975">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/f23f678b2eaa1e520d0f22215b30887fe9f6143f.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">College of Public Health New Student Orientation</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482705" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482705" href="http://localhost:8100/#/tab/feed/482705">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c38264a3e73ba99be8938674fca156c986e911ef.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">College of Public Health Resource Fair</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482742" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482742" href="http://localhost:8100/#/tab/feed/482742">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/7ecf92bfd64542c822557ef0f11a5a17c4f3360b.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Fall 2015 New TA Orientation</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/492617" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/492617" href="http://localhost:8100/#/tab/feed/492617">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">The Newcomers Division of The University Club </h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/473725" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/473725" href="http://localhost:8100/#/tab/feed/473725">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/16dd3e5f7bdfba00781918ae3cc9a680f25aaf97.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Dana Ramundt Golf Outing</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/311113" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/311113" href="http://localhost:8100/#/tab/feed/311113">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Celebrating 100 Years of Urology at the University of Iowa</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482477" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482477" href="http://localhost:8100/#/tab/feed/482477">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/a3264005ae9313794b37cc6030fdfaea0e4d5a9e.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">On Iowa! 2015</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/477625" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/477625" href="http://localhost:8100/#/tab/feed/477625">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/662d0424057de0b82d3d3f873a4143acb756e261.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Open House for the incoming Class of 2019</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/486239" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/486239" href="http://localhost:8100/#/tab/feed/486239">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b9f682c497aa4f60c0c2cb4f3ce67a5960a55259.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">GMS Global Development Debate</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/466800" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/466800" href="http://localhost:8100/#/tab/feed/466800">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/56f5d218b9249f569b7fee29a0e495fa50ac5f41.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">On Iowa! Tippie College of Business Open House</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482702" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482702" href="http://localhost:8100/#/tab/feed/482702">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/f2dab12eee88f11eefd2fc3be9a2c60b65aac0cd.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">CPHSA Kickball Tournament</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482692" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482692" href="http://localhost:8100/#/tab/feed/482692">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/f0c4ec7cbf89788d8d11b211cac3adb21b1bb694.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">College of Public Health Picnic</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/473789" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/473789" href="http://localhost:8100/#/tab/feed/473789">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/ae20e211a472cd32e662086ec3b87df1c27f996e.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Friday Night Concert: The Fez</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482680" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482680" href="http://localhost:8100/#/tab/feed/482680">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/fcfcf320aeadac24bbacf647733d2f3825c69a16.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Iowa Hawkeye Soccer</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/485285" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/485285" href="http://localhost:8100/#/tab/feed/485285">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/affad5a56b5e9af7831464d778b9774b6121a52a.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Learn To Row: Students</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/339039" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/339039" href="http://localhost:8100/#/tab/feed/339039">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/f67d3d2fe87d50df698c4b76929005091968323e.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Biochemistry Annual Retreat</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482447" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482447" href="http://localhost:8100/#/tab/feed/482447">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d5f9bbfd588c9a5d8585aff1f9716445c72f4602.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Be Greek BBQ</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/467394" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/467394" href="http://localhost:8100/#/tab/feed/467394">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/a67a99660394521a0d32ca0c9ce9c5190a2b3b2a.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Drawing Closer: Celebrating Hancher’s Opening</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/477637" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/477637" href="http://localhost:8100/#/tab/feed/477637">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/cb3559188b82906cfb3eca762aa5ca67f82df7f7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Passport to Iowa: Talent Showcase</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/488828" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/488828" href="http://localhost:8100/#/tab/feed/488828">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/6af822234da31dc05aa78df7ef8d681d794157da.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Free Movie Series - The LEGO Movie</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/485288" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/485288" href="http://localhost:8100/#/tab/feed/485288">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/affad5a56b5e9af7831464d778b9774b6121a52a.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Learn to Row: Adults</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482684" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482684" href="http://localhost:8100/#/tab/feed/482684">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/63c9209b9658f7811dbdf44be9bfd40503867c3e.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Iowa Hawkeye Soccer</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/450779" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/450779" href="http://localhost:8100/#/tab/feed/450779">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Classes Open</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/384914" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/384914" href="http://localhost:8100/#/tab/feed/384914">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/bf9426dc119b2178551c2fa775a29ed2c8cee204.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Law Classes Begin</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/400529" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/400529" href="http://localhost:8100/#/tab/feed/400529">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Opening of Classes</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/450789" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/450789" href="http://localhost:8100/#/tab/feed/450789">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/97727bba43c00e719dc73dcfbd20777c20087055.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Science Visualization Summer School</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/479559" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/479559" href="http://localhost:8100/#/tab/feed/479559">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/88d4027d91261c9ab0a086e09c28e13a2a0246e1.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Fair days - Welcome Week 2015</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/479953" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/479953" href="http://localhost:8100/#/tab/feed/479953">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">PA / Faculty Lunch Meeting</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/484896" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/484896" href="http://localhost:8100/#/tab/feed/484896">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/e54373cc2a85ca85c055844c8af38e070150f0ab.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Tips for New Teachers</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/449658" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/449658" href="http://localhost:8100/#/tab/feed/449658">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/f9014bcb6869d8fb3d8c7a93979b85b7bb88e48d.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Diabetes and Obesity Talks: Pilot &amp; Feasibility Grant Recipient Progress Update</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/493166" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/493166" href="http://localhost:8100/#/tab/feed/493166">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/14344943ec07d0c319b73ac94e7dd80b54ceaea9.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">First Day of Classes</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/483678" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/483678" href="http://localhost:8100/#/tab/feed/483678">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/5305b3da985a6c8ffa1b51cd4643d630e6ebe34d.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Biomass Fuel Project Field Day</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/484897" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/484897" href="http://localhost:8100/#/tab/feed/484897">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/e54373cc2a85ca85c055844c8af38e070150f0ab.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Leading Discussions</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482715" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482715" href="http://localhost:8100/#/tab/feed/482715">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c38264a3e73ba99be8938674fca156c986e911ef.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">CPH Portrait Session</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/493669" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/493669" href="http://localhost:8100/#/tab/feed/493669">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/e1386776e1f993de95c1bbb909d95be9e5d71a2c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Microbiology Seminar: John V. Williams, MD</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/480010" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/480010" href="http://localhost:8100/#/tab/feed/480010">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/e22fcbb9a35d8f06329ea27de8a72cbb3433fdad.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Cultural &amp; LGBT Resource Centers' Fall Open House</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/483231" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/483231" href="http://localhost:8100/#/tab/feed/483231">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b9f682c497aa4f60c0c2cb4f3ce67a5960a55259.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Neurology Interest Group Meeting</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/481768" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/481768" href="http://localhost:8100/#/tab/feed/481768">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b9f682c497aa4f60c0c2cb4f3ce67a5960a55259.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Pediatric Interest Group Meeting</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/467273" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/467273" href="http://localhost:8100/#/tab/feed/467273">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/c4210147916c2fa52fea3e20be0a48dfb64beb89.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Appellate Advocacy Kickoff Meeting</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/471613" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/471613" href="http://localhost:8100/#/tab/feed/471613">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/7903ff18e28889b0dadc298d55c2883360a58c3c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Need Small Business Advice? UIRP Hosts Jason Sytsma for "Startup Solutions"</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/383052" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/383052" href="http://localhost:8100/#/tab/feed/383052">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/e1386776e1f993de95c1bbb909d95be9e5d71a2c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Biochemistry Faculty Meeting</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/446121" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/446121" href="http://localhost:8100/#/tab/feed/446121">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/bf9426dc119b2178551c2fa775a29ed2c8cee204.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">AAI Kick-off Meeting</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/463997" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/463997" href="http://localhost:8100/#/tab/feed/463997">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/082f2e61531c9205eac464ccf442075049e92237.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">College of Public Health 2015 Distinguished Faculty Lecture</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/488865" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/488865" href="http://localhost:8100/#/tab/feed/488865">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b9f682c497aa4f60c0c2cb4f3ce67a5960a55259.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Internal Medicine Interest Group</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/474304" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/474304" href="http://localhost:8100/#/tab/feed/474304">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/75ad7968e72e9a8ca11c5883f22945f99f09f3f5.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Iowa Soul Festival </h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/455431" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/455431" href="http://localhost:8100/#/tab/feed/455431">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">M2/PA2 MOHD IV Exam</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/470209" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/470209" href="http://localhost:8100/#/tab/feed/470209">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/303dade24b0e2ebcabfc132cfd3ed2bdeefa153a.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Tippie Student Leadership Competency Training</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/487718" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/487718" href="http://localhost:8100/#/tab/feed/487718">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/80bfb9cd8a1d80c375b9583284d5329bf06e3a87.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Welcome Luncheon for Students of Color</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/455305" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/455305" href="http://localhost:8100/#/tab/feed/455305">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/d2e76b08238582950d138bfade585d20807a59e7.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">M1/PA1 Foundations Exam 1</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/311469" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/311469" href="http://localhost:8100/#/tab/feed/311469">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b9f682c497aa4f60c0c2cb4f3ce67a5960a55259.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Surgery PBA Exam</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/484033" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/484033" href="http://localhost:8100/#/tab/feed/484033">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/ccf8c858fd8642cd9a3c381a272bacc8c546c693.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Ignite Tippie: Kickoff to Tippie Launch Week</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/482688" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/482688" href="http://localhost:8100/#/tab/feed/482688">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/cc06a826ec22f136ea0e12222ab89722fce3b175.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Iowa Hawkeye Soccer</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/467398" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/467398" href="http://localhost:8100/#/tab/feed/467398">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/7a01aef01a72521012984653c8e01a1dc494e136.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Sharon Jones &amp; The Dap-Kings</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/491828" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/491828" href="http://localhost:8100/#/tab/feed/491828">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/92b5444612993ccc3b7dfbfb984b60a635dab2f8.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Dakaboom</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/476526" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/476526" href="http://localhost:8100/#/tab/feed/476526">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/5adf4f7116a78b4b1eca51f5abaa825818b53640.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">UI Mobile Museum at ToGather Together Fun Fair</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/484014" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/484014" href="http://localhost:8100/#/tab/feed/484014">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/b9f682c497aa4f60c0c2cb4f3ce67a5960a55259.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Family Medicine Interest Group</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/455961" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/455961" href="http://localhost:8100/#/tab/feed/455961">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/97727bba43c00e719dc73dcfbd20777c20087055.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Introduction to High Performance Computing  (Helium &amp; Neon)</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/486435" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/486435" href="http://localhost:8100/#/tab/feed/486435">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/e1386776e1f993de95c1bbb909d95be9e5d71a2c.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">M2 Class Meeting on Core Clinical Schedules</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/449661" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/449661" href="http://localhost:8100/#/tab/feed/449661">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/f9014bcb6869d8fb3d8c7a93979b85b7bb88e48d.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Diabetes and Obesity Talks: Pilot &amp; Feasibility Grant Recipient Progress Update</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events --><div class="list card" ng-repeat="event in events">
+                <ion-item href="#/tab/feed/491796" class="item item-complex"><a class="item-content" ng-href="#/tab/feed/491796" href="http://localhost:8100/#/tab/feed/491796">
+                    <div class="item item-image">
+                        <img class="thumbnail" src="./localhost_files/a421e20956b8b25bf0f8984f00b66d3164e63fc1.jpg">
+                    </div>
+                    <div class="item item-body">
+                        <div>
+                            <h2 class="ng-binding">Major Information Fair</h2>
+                           
+                        </div>
+                    </div>
+                </a></ion-item>
+            </div><!-- end ngRepeat: event in events -->
+        </div></ion-list>
+    </div><div class="scroll-bar scroll-bar-v"><div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 53px;"></div></div></ion-content>
+</ion-view></ion-nav-view></ion-tabs></ion-nav-view>
+
+<script>//<![CDATA[
+document.write('<script src="//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1"><\/script>')
+//]]></script><script src="./localhost_files/livereload.js"></script>
+
+
+<div class="click-block click-block-hide"></div></body></html>

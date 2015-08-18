@@ -1,4 +1,11 @@
-<ion-view view-title="{{event.title}}">
+<!-- <ion-view view-title="Event Details"> -->
+<ion-view>
+
+    <ion-nav-title  >
+      <h1 class="title">{{event.title}}</h1>
+    </ion-nav-title>
+
+
     <ion-content class="padding">
         <div class="list card">
             <div class="item item-image">
@@ -9,6 +16,7 @@
                     <div class="row">
                         <div class="col col-25">
                             <h2>Title:</h2> </div>
+
                         <div class="col col-75">
                             <h2>{{event.title}}</h2></div>
                     </div>
@@ -28,11 +36,29 @@
                         <div class="col col-25">
                             <h3>Description:</h3></div>
                     </div>
+
+
                     <div class="row">
-                        <div class="col">
-                            <h3>{{event.description_text}}</h3>
-                        </div>
-                    </div>
+                        <div class="col">  
+                            <h3>{{event.description_text}}</h3> 
+
+                        
+                        <ion-list ng-repeat="tag in eventTags"> 
+
+                            <ion-item href="#/tab/feed/tag/{{tag}}">  
+                            
+                            <button> 
+                                
+                                {{tag}}  
+                                
+                            </button>
+                            </ion-item>
+                        </ion-list>
+                        
+                        </div> 
+                    </div> 
+
+
                     <div ng-if="event.ticket_url != '' ">
                         <a href="{{event.ticket_url}}" onclick="window.open(this.href, '_blank', 'location=yes'); return false;">
                             <button class="button button-block button-royal">
@@ -40,6 +66,7 @@
                             </button>
                         </a>
                     </div>
+
                     <div ng-if="event.facebook_id">
                         <a href="https://www.facebook.com/events/{{event.facebook_id}}" onclick="window.open(this.href, '_blank', 'location=yes'); return false;">
                             <button class="button button-block button-royal">
@@ -58,6 +85,7 @@
                         <button class="button button-block button-royal">
                             View Event on Website
                         </button>
+
                     </a>
                 </div>
             </div>

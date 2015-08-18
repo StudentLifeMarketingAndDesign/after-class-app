@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   .state('tab.tagged-events', {
-    url: '/feed/tag/:tagId',
+    url: '/feed/:tagID',
     views: {
       'tab-feed':{
         templateUrl: 'templates/tagged-events.html',
