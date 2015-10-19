@@ -1,4 +1,4 @@
- <ion-view  >
+ <ion-view >
 
 <!-- <ion-view> -->
     <ion-nav-title>
@@ -7,19 +7,81 @@
 
     <ion-content class="padding"> 
         <ion-list ng-controller="FeedCtrl">
-            <div class="list card" ng-repeat="event in events">
-                <ion-item href="#/tab/feed/{{event.event.id}}">
-                    <div class="item item-image">
-                        <img class="thumbnail" src="{{event.event.photo_url}}">
-                    </div>
-                    <div class="item item-body">
-                        <div>
-                            <h2>{{event.event.title}}</h2>
-                           
-                        </div>
-                    </div>
-                </ion-item>
+
+            <!-- Begin "Other Events" section -->
+            <!--Header-->
+            <div class="row">
+                <h2 class="header initial-header">Featured Events</h2>
             </div>
-        </ion-list>
+            <hr>
+          
+
+            <!-- Ionic Slider   (will be deprecated in Ionic 2.0)-->
+            <ion-slide-box class="feature-slider" on-slide-changed="slideHasChanged($index)" show-pager="true" does-continue="true">
+                <ion-slide ng-repeat="event in events">
+                    <a href="#/tab/feed/{{event.event.id}}" class="event-link">
+                        <div class="image-slide" style="background-image: url({{event.event.photo_url}})"></div>
+                    </a>
+                </ion-slide>
+            </ion-slide-box>             
+            
+            <!--Header-->
+            <div class="row header-container">
+                <h2 class="header">Upcoming Events</h2>
+            </div>
+            <hr>
+
+            <!--Event Tiles-->
+            <div class="row flex-container">
+                <div class="flex-item" ng-repeat="event in events | limitTo:4">
+                    <a href="#/tab/feed/{{event.event.id}}" class="event-link">
+                        <div class="event-tile-image" style="background-image: url({{event.event.photo_url}})">
+                            <div class="col-offset-50 col-50">
+                                <div class="time-tag"><p>in 3 days</p></div>
+                            </div>
+                        </div>
+                        <div class="item item-divider item-dark event-title">
+                            {{event.event.title}}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-offset-80 col-20">
+                    <a href="" class="expander" >
+                        <h5>See All</h5>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Begin "Other Events" section -->
+            <!--Header-->
+            <div class="row header-container">
+                <h2 class="header">Other Events</h2>
+            </div>
+            <hr>
+
+            <!--Event Tiles-->
+            <div class="row flex-container">
+                <div class="flex-item" ng-repeat="event in events | limitTo:4">
+                    <a href="#/tab/feed/{{event.event.id}}" class="event-link">
+                        <div class="event-tile-image" style="background-image: url({{event.event.photo_url}})">
+                            <div class="col-offset-50 col-50">
+                                <div class="time-tag"><p>in 3 days</p></div>
+                            </div>
+                        </div>
+                        <div class="item item-divider item-dark event-title">
+                            {{event.event.title}}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-offset-80 col-20">
+                    <a href="" class="expander" >
+                        <h5>See All</h5>
+                    </a>
+                </div>
+            </div>
     </ion-content>
 </ion-view>

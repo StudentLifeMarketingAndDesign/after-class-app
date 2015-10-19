@@ -21,9 +21,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 // Include all of Ionic
-
+@import "_variables";
+@import "slidebox";
 @import "styles";
 @import "header";
 @import "www/lib/ionic/scss/ionic";
+//@import "angular-carousel";
+
 
 
