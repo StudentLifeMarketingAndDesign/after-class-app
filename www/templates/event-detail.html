@@ -16,16 +16,35 @@
                     <div class="row">
                         <div class="col col-25">
                             <h2>Title:</h2> </div>
-
+                            {{event.test}}
                         <div class="col col-75">
                             <h2>{{event.title}}</h2></div>
                     </div>
+
+
+
                     <div class="row">
+
                         <div class="col col-25">
-                            <h3>Location:</h3></div>
-                        <div class="col col-75">
-                            <h3>{{event.location_name}}</h3></div>
+                            <h3>Location:</h3>
+                        </div>
+
+                        <div class="col col-25" ng-if="event.venue_id">
+                            <ion-item href="#/tab/feed/venue/{{event.venue_id}}"> 
+                                <button>{{event.location_name}}</button>
+                            </ion-item>
+                        </div>
+
+                         <div class="col col-25" ng-if="event.venue_id == null">
+                            <h3>{{event.location_name}}</h3>
+                        </div>
+
+                        
+                        
                     </div>
+
+
+
                     <div class="row">
                         <div class="col col-25">
                             <h3>Upcoming Date:</h3></div>

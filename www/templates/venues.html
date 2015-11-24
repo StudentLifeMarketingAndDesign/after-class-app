@@ -1,0 +1,39 @@
+
+<ion-view>
+
+    <ion-nav-title  >
+      <h1 class="title">Venue: {{}}</h1>
+    </ion-nav-title>
+
+   
+    <ion-content class="padding"> 
+    
+        <ion-list ng-controller="VenuesCtrl">
+        
+            <div class="list card" ng-repeat="event in events"> 
+            
+                <ion-item href="#/tab/feed/{{event.event.id}}"> 
+               
+                    <div class="item item-image"> 
+                    
+                        <img class="thumbnail" src="{{event.event.photo_url}}">  
+                        
+                    </div>
+                    <div class="item item-body"> 
+                        <div>
+                            <h2>{{event.event.title}}</h2> 
+
+                           
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+
+
+
+</ion-view>
+
+<!-- 
+working on getting the views to be clickable and load another page -->

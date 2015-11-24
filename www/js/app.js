@@ -70,6 +70,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.venues', {
+    url: '/feed/venue/:venueId',
+    views: {
+      'tab-feed':{
+        templateUrl: 'templates/venues.html',
+        controller: 'VenuesCtrl'
+      }
+    }
+  })
+
+
   .state('tab.chats', {
       url: '/chats',
       views: {

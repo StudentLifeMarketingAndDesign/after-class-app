@@ -2,8 +2,9 @@ angular.module('starter.services', [])
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
-
+         
   // Some fake testing data
+         
   var chats = [{
     id: 0,
     name: 'Ben Sparrow',
@@ -33,7 +34,9 @@ angular.module('starter.services', [])
 
   return {
     all: function() {
+         console.log('YEAAAAA');
       return chats;
+         
     },
     remove: function(chat) {
       chats.splice(chats.indexOf(chat), 1);
@@ -62,17 +65,29 @@ angular.module('starter.services', [])
         return $http.get('http://events.uiowa.edu/api/2/events/' + eventId);
       },
 
-      getByTag: function(tagId){
+      getEventsByTag: function(tagId){
         var id = tagId;
         console.log('http://events.uiowa.edu/api/2/events?days=200&pp=100&match=all&distinct=true&keyword[]=' + tagId);
         return $http.get('http://events.uiowa.edu/api/2/events?days=200&pp=100&match=all&distinct=true&keyword[]=' + tagId);
         
       },
 
+      getEventsByVenue: function(venueId) {
+        var id = venueId;
+        return $http.get('http://events.uiowa.edu/api/2/events?days=200&pp=100&match=all&distinct=true&venue_id=' + venueId);
+      },
 
-
+      getVenue: function(venueId) {
+        var id = venueId;
+        return $http.get('http://events.uiowa.edu/api/2/places/' + venueId);
+      },
   };
 });
+
+
+// .factory('Events', function($http)) {
+  
+// }
 
 
 
