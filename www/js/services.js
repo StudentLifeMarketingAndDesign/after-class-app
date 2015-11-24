@@ -53,7 +53,7 @@ angular.module('starter.services', [])
 })
 
 .factory('Events', function($http){
-    var events = $http.get('http://events.uiowa.edu/api/2/events?days=200&pp=100&match=all&distinct=true');
+    var events = $http.get('http://events.uiowa.edu/api/2/events?days=200&type[]=33506&pp=100&match=all&distinct=true');
     return {
       async: function() {
       return events;  //1. this returns promise

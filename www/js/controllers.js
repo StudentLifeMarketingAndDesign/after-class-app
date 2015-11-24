@@ -1,5 +1,4 @@
 angular.module('starter.controllers', [])
-
 // .controller('FeedCtrl', function($scope, $http) {
 //   $http.get("http://hulk.imu.uiowa.edu/after-class/events/feed/")
 //   .then(function(res){
@@ -30,11 +29,7 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-
-
-.controller('FeedCtrl', function(Events, $scope, Events){
-
-
+.controller('FeedCtrl', function(Events, $scope, $ionicSlideBoxDelegate){
 
  Events.getEventsByTag("art").then(function(res) { 
   console.log(res.data.events);
@@ -46,7 +41,9 @@ angular.module('starter.controllers', [])
  Events.async().then(function(res) { 
   console.log(res.data.events);
   $scope.events = res.data.events;
+  $ionicSlideBoxDelegate.update();
 });
+
 
 })
 
@@ -65,7 +62,6 @@ angular.module('starter.controllers', [])
     console.log(res.data.events);
     $scope.events = res.data.events;
     $scope.tag = $stateParams.tagId;
-
   });
 })
 
@@ -140,5 +136,6 @@ angular.module('starter.controllers', [])
 //     enableFriends: true
 //   };
 // });
+
 
 

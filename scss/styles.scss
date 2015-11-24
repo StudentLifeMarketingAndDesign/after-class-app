@@ -1,3 +1,120 @@
-.thumbnail{
+.event-tile-image{
+	height: 150px;
+	background-size: cover;
+	padding: 0px !important;
 
+	@media screen and (max-width: 500px) {
+    	height: 100px
+    }
+
+}
+
+.feature-slider {
+	height: 350px;
+
+	@media screen and (max-width: 500px) {
+    	height: 200px;
+    }
+
+    @media screen and (min-width: 1000px) {
+    	height: 500px;
+    }
+}
+
+.event-link {
+	text-decoration: none;
+	padding: 0px;
+}
+
+.event-title {
+	padding-right: 3px !important; 
+	padding-left: 3px !important;
+}
+
+.initial-header {
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.header-container {
+	margin-top:30px;
+}
+
+.header {
+	//color: #575757; 
+	color: #e1ca69;
+	margin-bottom:0px;
+}
+
+hr{
+	border-color: #575757; 
+	margin-top:0px
+}
+
+.time-tag {
+	height: 20px;
+	text-align: right;
+
+	p {
+		background-color: RGBA(34,34,34,.9);
+		float: right;
+		color: white;
+		font-size: 8pt;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
+
+.expander {
+	text-decoration:none;
+
+	h5 {
+		text-align: center;
+		color:#007aff; 
+		margin-right:0px;
+	}
+}
+
+.flex-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: start;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.flex-item {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 0 48%;
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    -webkit-margin: 2% 0;
+    margin: 2% 0;
+
+    @media screen and (max-width: 319px) {
+    	flex: 0 0 100%;
+    	margin-bottom: 7%;
+    }
+
+    @media screen and (min-width: 1000px) {
+    	flex: 0 0 24%;
+    }
 }
