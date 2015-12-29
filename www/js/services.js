@@ -60,8 +60,6 @@ angular.module('starter.services', [])
       },
       get: function(eventId){
         var id = eventId;
-
-       
         return $http.get('http://events.uiowa.edu/api/2/events/' + eventId);
       },
 
@@ -74,20 +72,18 @@ angular.module('starter.services', [])
 
       getEventsByVenue: function(venueId) {
         var id = venueId;
+        console.log('http://events.uiowa.edu/api/2/events?days=200&pp=100&match=all&distinct=true&venue_id=' + venueId);
         return $http.get('http://events.uiowa.edu/api/2/events?days=200&pp=100&match=all&distinct=true&venue_id=' + venueId);
       },
 
-      getVenue: function(venueId) {
-        var id = venueId;
-        return $http.get('http://events.uiowa.edu/api/2/places/' + venueId);
-      },
+      // getVenue: function(venueId) {
+      //   var id = venueId;
+      //   return $http.get('http://events.uiowa.edu/api/2/places/' + venueId);
+      // },
   };
 });
 
 
-// .factory('Events', function($http)) {
-  
-// }
 
 
 
